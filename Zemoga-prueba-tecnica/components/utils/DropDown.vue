@@ -39,7 +39,22 @@ export default {
       return 2 * this.$props.config.length
     },
   },
+  created() {
+    /*eslint-disable */
+    //suppress all warnings between comments
+    window.addEventListener('resize', this.myEventHandler)
+    /* eslint-enable */
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.myEventHandler)
+  },
   methods: {
+    myEventHandler(e) {
+      // your code for handling resize...
+      if (e.currentTarget.innerWidth < 750) {
+        this.selected = 'Grid'
+      }
+    },
     toggleDropdown() {
       this.isBottomSectionToggled = !this.isBottomSectionToggled
     },

@@ -449,8 +449,26 @@ export default {
   cursor: not-allowed;
 }
 @media screen and (max-width: 1110px) {
-  .cardMain {
+  .cardMainList {
     margin: 1rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .cardTopListMain {
+    width: 70%;
+  }
+  .cardContentList {
+    width: 30%;
+  }
+  .cardTopList {
+    & p {
+      left: 15rem;
+      font-size: 1.5rem;
+    }
+    &__descriptionList {
+      margin: 1rem 1.5rem 1rem 15rem;
+      font-size: 0.8rem;
+    }
   }
 }
 </style>

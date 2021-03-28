@@ -42,6 +42,7 @@ import { mapGetters } from 'vuex'
 import CardPeople from '~/components/cardPeople/cardPeople.vue'
 import CardPeopleList from '~/components/cardPeople/cardPeopleList.vue'
 import DropDown from '~/components/utils/DropDown.vue'
+
 export default {
   components: {
     CardPeople,
@@ -62,10 +63,25 @@ export default {
       people: 'people/allPeople',
     }),
   },
+  created() {
+    /*eslint-disable */
+    //suppress all warnings between comments
+    window.addEventListener('resize', this.myEventHandler)
+    /* eslint-enable */
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.myEventHandler)
+  },
   mounted() {
     this.$store.dispatch('people/fetchAllPeople')
   },
   methods: {
+    myEventHandler(e) {
+      // your code for handling resize...
+      if (e.currentTarget.innerWidth < 750) {
+        this.mosaic = true
+      }
+    },
     setNewSelectedFeature(e) {
       if (e === 'list') {
         this.mosaic = false
@@ -97,6 +113,16 @@ export default {
 @media screen and (max-width: 1110px) {
   .row {
     justify-content: center;
+  }
+}
+@media screen and (max-width: 750px) {
+  .menuSelection {
+    display: none;
+  }
+  .row {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: flex-start;
   }
 }
 </style>

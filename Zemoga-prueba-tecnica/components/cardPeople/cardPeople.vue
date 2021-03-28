@@ -340,7 +340,7 @@ export default {
     font-weight: bold;
   }
   &__vote {
-    width: 63%;
+    width: 60%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -425,9 +425,22 @@ export default {
   background-color: #30303088;
   cursor: not-allowed;
 }
+@media screen and (max-width: 750px) {
+  .cardMain {
+    margin: 0 !important;
+    margin-right: 1rem !important;
+  }
+}
 @media screen and (max-width: 1110px) {
   .cardMain {
     margin: 1rem;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .cardContent {
+    &__vote {
+      width: 65%;
+    }
   }
 }
 </style>
