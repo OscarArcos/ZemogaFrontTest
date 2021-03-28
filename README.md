@@ -2,7 +2,7 @@
 ##### Created by Oscar Arcos 👨‍💻
 
 ### Overview
-This test is based on [Zemoga Front End Development - Candidate Test v2.1](https://github.com/zemoga/ui-test "Zemoga Front End Development - Candidate Test v2.1") in order to show my skills as a front end developer to apply for the vacancy. The project has 2 main modules, (The [Back end](https://github.com/OscarArcos/ZemogaFrontTest/tree/master/Zemoga-back "Back end") and the [Front end](https://github.com/OscarArcos/ZemogaFrontTest/tree/master/Zemoga-prueba-tecnica "Front end"))
+This test is based on [Zemoga Front End Development - Candidate Test v2.1](https://github.com/zemoga/ui-test "Zemoga Front End Development - Candidate Test v2.1") in order to show my skills as a front end developer to apply for the vacancy. The project has 2 main modules, (The [Back end](https://github.com/OscarArcos/ZemogaFrontTest/tree/master/Zemoga-back "Back end") and the [Front end](https://github.com/OscarArcos/ZemogaFrontTest/tree/master/Zemoga-prueba-tecnica "Front end")).
 
 **Back end** 🚀
 
@@ -14,7 +14,7 @@ To access the back end files directory run the command
 
 **Front end** 💻
 
-The front end is built with [Nuxt.js](https://nuxtjs.org/ "Nuxt.js") which is a Vue.js framework that helps us and make it easy the management of data states
+The front end is built with [Nuxt.js](https://nuxtjs.org/ "Nuxt.js") which is a Vue.js framework that helps us and make it easy the management of data states and more specs. Also, the css preprocessor called sass is being used for the main html styles.
 
 To access the back end files directory run the command
 
