@@ -33,7 +33,13 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/style-resources',
   ],
+
+  styleResources: {
+    // your settings here
+    scss: ['./assets/scss/main.scss'],
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

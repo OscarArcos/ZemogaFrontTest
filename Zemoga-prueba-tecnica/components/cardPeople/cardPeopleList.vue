@@ -64,7 +64,7 @@
         >
           <div
             v-if="botonVisible"
-            class="cardTopList__icons cardTopList__iconsLike cursorPointer"
+            class="cardContentList__buttonsIcons cardTopList__icons cardTopList__iconsLike cursorPointer"
             :class="clickLike ? 'botonBorderedList' : ''"
             @click="clickLikeHandler"
           >
@@ -74,7 +74,7 @@
           </div>
           <div
             v-if="botonVisible"
-            class="cardTopList__icons cardTopList__iconsDontLike cursorPointer"
+            class="cardContentList__buttonsIcons cardTopList__icons cardTopList__iconsDontLike cursorPointer"
             :class="clickDontLike ? 'botonBorderedList' : ''"
             @click="clickDontLikeHandler"
           >
@@ -328,11 +328,11 @@ export default {
     font-size: 0.9rem;
   }
   &__icons {
-    width: 3rem;
+    width: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 3rem;
+    height: 2.5rem;
     & svg {
       width: 1.5rem;
       height: 1.5rem;
@@ -363,11 +363,13 @@ export default {
     color: white;
     font-weight: bold;
   }
+  &__buttonsIcons {
+    margin-left: 0.5rem;
+  }
   &__vote {
-    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-top: 0.8rem;
     & svg {
       width: 1.5rem;
@@ -378,8 +380,9 @@ export default {
     justify-content: flex-end;
   }
   &__buttonVote {
-    width: 7rem;
-    height: 3rem;
+    width: 6rem;
+    margin-left: 0.5rem;
+    height: 2.5rem;
     display: flex;
     align-items: center;
     background-color: #00000088;
@@ -455,10 +458,10 @@ export default {
 }
 @media screen and (max-width: 1024px) {
   .cardTopListMain {
-    width: 70%;
+    width: 75%;
   }
   .cardContentList {
-    width: 30%;
+    width: 25%;
   }
   .cardTopList {
     & p {

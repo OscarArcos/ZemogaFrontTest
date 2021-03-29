@@ -65,7 +65,7 @@
         >
           <div
             v-if="botonVisible"
-            class="cardTop__icons cardTop__iconsLike cursorPointer"
+            class="cardContent__buttonsIcons cardTop__icons cardTop__iconsLike cursorPointer"
             :class="clickLike ? 'botonBordered' : ''"
             @click="clickLikeHandler"
           >
@@ -75,7 +75,7 @@
           </div>
           <div
             v-if="botonVisible"
-            class="cardTop__icons cardTop__iconsDontLike cursorPointer"
+            class="cardContent__buttonsIcons cardTop__icons cardTop__iconsDontLike cursorPointer"
             :class="clickDontLike ? 'botonBordered' : ''"
             @click="clickDontLikeHandler"
           >
@@ -305,7 +305,7 @@ export default {
     left: 2.5rem;
     color: white;
     font-weight: 400;
-    font-size: 2.1rem;
+    font-size: 2rem;
   }
   &__icons {
     width: 2rem;
@@ -339,8 +339,10 @@ export default {
     color: white;
     font-weight: bold;
   }
+  &__buttonsIcons {
+    margin-left: 0.5rem;
+  }
   &__vote {
-    width: 60%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -355,7 +357,8 @@ export default {
   }
   &__buttonVote {
     width: 7rem;
-    height: 2.2rem;
+    height: 2rem;
+    margin-left: 0.5rem;
     display: flex;
     align-items: center;
     background-color: #00000088;
@@ -434,13 +437,6 @@ export default {
 @media screen and (max-width: 1110px) {
   .cardMain {
     margin: 1rem;
-  }
-}
-@media screen and (max-width: 1090px) {
-  .cardContent {
-    &__vote {
-      width: 65%;
-    }
   }
 }
 </style>
